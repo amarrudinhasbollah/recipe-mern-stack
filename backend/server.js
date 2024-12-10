@@ -1,12 +1,19 @@
 // Entrypoint for API
 import express from 'express';
+import dotenv from 'dotenv';
+import { connectRecipeDB } from './config/db.js';
+
+import recipeRoutes from "./routes/recipe.js"
+
+dotenv.config();
 
 const app = express();
 
-app.get("/recipes", (req, res) => {
-    res.send("Server is ready.")
-})
+app.use(express.json()); // Allows to accept JSON data in req.body
 
-app.listen(3000, () => {
-    console.log("Server started at http://localhost:3000");
+app.use("/api/recipes", recipeRoutes);
+
+app.listen(5000, () => {
+    connectRecipeDB();
+    console.log("Server started at http://localhost:5000");
 })
