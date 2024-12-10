@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const recipeSchema = new mongoose.Schema(
     {
+        username: {
+            type: String,
+            default: "Anonymous"
+        },
         title: {
             type: String,
             required: true,

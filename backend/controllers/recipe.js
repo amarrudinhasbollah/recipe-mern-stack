@@ -51,12 +51,16 @@ export const deleteRecipe = async (req, res) => {
     const {id} = req.params;
     console.log("id: ", id);
 
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({ success: false, message: "Invalid Recipe ID" })
+    }
+
     try {
         await Recipe.findByIdAndDelete(id);
         res.status(200).json({ success: true, message: "Recipe deleted" });
     } catch (error) {
         console.log("Error in deleting recipes: ", error.message);
-        res.status(404).json({ success: false, message: "Recipe not found" });
+        res.status(500).json({ success: false, message: "Server error" });
     }
 }
 

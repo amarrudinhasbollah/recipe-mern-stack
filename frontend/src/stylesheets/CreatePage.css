@@ -1,0 +1,11 @@
+.form-group {
+    padding-bottom: 12px;
+}
+
+.toast-style {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    z-index: 1055;
+}
