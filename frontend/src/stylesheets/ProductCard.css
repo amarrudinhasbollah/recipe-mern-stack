@@ -1,0 +1,31 @@
+.card-hover {
+  --bs-card-hover-transform: translate3d(0, -.125rem, 0);
+  /* Custom Property */
+  transition: transform 0.3s ease;
+  /* Animation */
+}
+
+.card-hover:hover {
+  transform: var(--bs-card-hover-transform);
+  /* Using custom property */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Shadow Effect */
+}
+
+.recipe-photo {
+  padding-bottom: 7px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  margin: 2px;
+}
+
+.toast-style {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  z-index: 9999;
+}

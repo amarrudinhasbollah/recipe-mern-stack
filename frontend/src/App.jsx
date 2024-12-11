@@ -12,17 +12,16 @@ import CreatePage from "./pages/CreatePage";
 
 function App() {
   return (
-    <div>
+    <body>
       <nav class="navbar navbar-dark bg-dark fixed-top">
         <NavBar />
       </nav>
-      <body>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/create" element={<CreatePage />} />
-        </Routes>
-      </body>
-    </div>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/create" element={<CreatePage />} />
+      </Routes>
+    </body>
   )
 }
 

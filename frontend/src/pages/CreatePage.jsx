@@ -27,6 +27,8 @@ const CreatePage = () => {
       console.log("Data sent to MongoDB: ")
       setSuccessToast({ show: true, message });
       setTimeout(() => setSuccessToast({ show: false, message: '' }), 3000);
+
+      setNewRecipe({ title: "", steps: "", photo: "" })
     }
   }
 
