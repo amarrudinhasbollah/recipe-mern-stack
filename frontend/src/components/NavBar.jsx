@@ -4,7 +4,7 @@ import { BsHouseFill, BsPersonFill, BsPersonCircle, BsBoxArrowInRight, BsPencilS
 const NavBar = () => {
   return (
     <div class="container-fluid">
-    <a class="navbar-brand" href="#">📜🖊Share-A-Recipe</a>
+    <a class="navbar-brand" href="/">📜🖊Share-A-Recipe</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,7 +16,7 @@ const NavBar = () => {
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><BsHouseFill /> Home</a>
+            <a class="nav-link active" aria-current="page" href="/"><BsHouseFill /> Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><BsBoxArrowInRight /> Log In</a>
@@ -27,7 +27,7 @@ const NavBar = () => {
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#"><BsPersonCircle /> View Profile</a></li>
-              <li><a class="dropdown-item" href="#"><BsPencilSquare /> Write a Recipe</a></li>
+              <li><a class="dropdown-item" href="/create"><BsPencilSquare /> Write a Recipe</a></li>
             </ul>
           </li>
         </ul>

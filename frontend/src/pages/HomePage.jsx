@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useRecipeStore } from '../store/recipe';
 import ProductCard from '../components/ProductCard';
-import Modal from '../components/Modal';
 
 const HomePage = () => {
   const { fetchRecipes, recipes } = useRecipeStore();

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { BsTrash3Fill, BsPencilSquare } from "react-icons/bs";
 import '../stylesheets/ProductCard.css';
 import { useRecipeStore } from '../store/recipe';
-import Modal from '../components/Modal';
 
 const ProductCard = ({ recipe }) => {
     const [successToast, setSuccessToast] = useState({ show: false, message: '' }); // Singular success toast
